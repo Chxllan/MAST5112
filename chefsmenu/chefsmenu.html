@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef's Menu App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Chef's Menu App</h1>
+
+    <div id="addItemForm">
+      <h2>Add Menu Item</h2>
+      <label for="dishName">Dish Name:</label>
+      <input type="text" id="dishName" placeholder="Dish name">
+
+      <label for="description">Description:</label>
+      <input type="text" id="description" placeholder="Description">
+
+      <label for="course">Select Course:</label>
+      <select id="course">
+        <option value="Starter">Starter</option>
+        <option value="Main">Main</option>
+        <option value="Dessert">Dessert</option>
+      </select>
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" placeholder="Price">
+
+      <button onclick="addMenuItem()">Add Item</button>
+    </div>
+
+    <div id="filterMenu">
+      <h2>Filter Menu by Course</h2>
+      <select id="filterCourse" onchange="filterMenu()">
+        <option value="All">All</option>
+        <option value="Starter">Starters</option>
+        <option value="Main">Mains</option>
+        <option value="Dessert">Desserts</option>
+      </select>
+    </div>
+
+    <h2>Total Menu Items: <span id="totalItems">0</span></h2>
+    <h2>Average Prices by Course:</h2>
+    <ul id="averagePrices">
+      <li>Starters: $<span id="starterPrice">R10</span></li>
+      <li>Mains: $<span id="mainPrice">R50</span></li>
+      <li>Desserts: $<span id="dessertPrice">R20</span></li>
+    </ul>
+
+    <div id="menuList">
+      <h2>Menu Items</h2>
+      <ul id="menuItemsList">
+		
+	starters	(Caesar Salad/Tomato Soup )
+	mains	(Spaghetti Bolognese/Tomato Soup)
+    desserts        (Chocolate Lava Cake/ Lemon Sorbet        )
+        <!-- Menu items will be dynamically added here -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
